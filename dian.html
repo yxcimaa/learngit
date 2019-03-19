@@ -35,17 +35,39 @@
     </style>
 </head>
 <script type="text/javascript">
+    // 创建提交表单函数
     function sumb() {
-        var uname = document.getElementById("user");
-        var reg = /^\w+@\w+\.\w+$/;
-        if (!reg.test(uname)) {
-            if (uname.length != 11 || !isnan(uname)) {
+        // 获取id为user的值
+        var uname = document.getElementById("user").value;
+        var upwd = document.getElementById("password").value;
+        // 邮件的正则
+        var reg = /^\w+@\w+\.+\w+$/;
+        if (isNaN(uname)) {
+            if (!reg.test(uname)) {
                 alert("用户名输入错误，请输入电话号码或者邮箱")
+                return false;
+
+            }
+            if (upwd.length > 12 || upwd.length < 8) {
+                alert("密码在8-12位之间")
+                return false;
+            }
+        } else {
+            if (uname.length > 12 || uname.length < 10) {
+                alert("用户名在10-16位之间")
+                return false;
+            }
+            if (upwd.length > 12 || upwd.length < 8) {
+                alert("密码在8-12位之间")
                 return false;
             }
         }
+
+
+
     }
 </script>
+
 
 <body>
     <!-- 顶部 -->
@@ -64,11 +86,12 @@
     <div class="right">
         <form action="http:www.baidu.com" method="POST" onSubmit="return sumb()">
             <span style="font-size:20px;">1号店用户登录</span> <a href="#" style="float:right">注册账号</a><br>
-            <input type="text" name="user" placeholder="邮箱/手机/用户名" style="height:55px;width:380px;margin-bottom:10px"
+            <input type="text" id="user" placeholder="邮箱/手机/用户名" style="height:55px;width:380px;margin-bottom:10px"
                 required>
             <br>
-            <input type="text" name="password" placeholder="密码" style="height:55px;width: 380px;" required>
+            <input type="password" id="password" placeholder="密码" style="height:55px;width: 380px;" required>
             <br>
+
             <div style="padding:20px 0px"> <input type="checkbox">自动登录
                 <a href="#" style="float:right">忘记密码?</a><br>
             </div>
