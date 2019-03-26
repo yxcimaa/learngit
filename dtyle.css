@@ -1,0 +1,65 @@
+.top{
+    height: 150px;
+    font-family: serif;
+    /* 阴影 */
+    text-shadow: 1px 1px 2px black;
+    /* 调整间距 */
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+hr{
+    color: rgba(158, 55, 55, 0.507);
+    
+}
+section{
+    /* 首行缩进 */
+    text-indent:2em;
+}
+h2{
+    font-family: serif;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+#left{
+    float: left;
+    width:600px;
+    height:400px;
+}
+#center{
+float: left;
+width: 600px;
+}
+#right{
+    float: right;
+    position: relative;
+}
+body{
+    /* 转换所有单词让其大写首字母 */
+text-transform:capitalize;
+/* 行高 */
+line-height: 1.5;
+letter-spacing: 1px;
+word-spacing: 1.5px;
+}
+button{
+    width: 150px;
+    margin: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 2;
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(to bottom right, rgb(228, 83, 83), rgb(240, 160, 191));
+    box-shadow: 2px 2px 2px black,
+        inset 2px 3px 5px rgba(172, 60, 60, 0.856),
+        inset -2px -3px 5px rgba(231, 128, 128, 0.699);
+}
+
+button:focus,
+button:hover {
+    background-image: linear-gradient(to bottom right, rgb(248, 77, 77), rgb(241, 87, 87));
+}
+li{
+    text-decoration: underline;
+    color: brown;
+}
