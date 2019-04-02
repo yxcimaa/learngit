@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>所有文章的初始页</h1>
+    <button onclick="show('college')">大学主页排版</button>
+
+    <script>
+        function show(name) {
+            switch (name) {
+                case 'college':
+                    window.open('./college', '_blank');
+                    break;
+                default:
+                    alert("检查show传的值！！！");
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
